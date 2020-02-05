@@ -29,7 +29,7 @@ export default {
         defalut: false
     },
     menus:{
-      type: Object,
+      type: Array,
       default: [ { name: '主页', router:'/', icon:'el-icon-s-home' } ]
     }
   },

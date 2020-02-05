@@ -3,19 +3,19 @@
         <el-row>
             <el-col class="fenxiao-tips" :span="10">一级代理分佣</el-col>
             <el-col :span="14">
-                <el-input  v-model="firstcom"></el-input>
+                <el-input  v-model="firstcom" maxlength="14"></el-input>
             </el-col>
         </el-row>
         <el-row>
             <el-col class="fenxiao-tips" :span="10">二级代理分佣</el-col>
             <el-col :span="14">
-                <el-input  v-model="secondcom"></el-input>
+                <el-input  v-model="secondcom" maxlength="14"></el-input>
             </el-col>
         </el-row>
         <el-row>
             <el-col class="fenxiao-tips" :span="10">三级代理分佣</el-col>
             <el-col :span="14">
-                <el-input  v-model="thirdcom"></el-input>
+                <el-input  v-model="thirdcom" maxlength="14"></el-input>
             </el-col>
         </el-row>
         <el-row>
@@ -54,12 +54,15 @@
         },
         watch:{
             firstcom(s){
+                s = s.toString()
                 this.firstcom = s.replace(/\D/g, '')
             },
             secondcom(s){
+                s = s.toString()
                 this.secondcom = s.replace(/\D/g, '')
             },
             thirdcom(s){
+                s = s.toString()
                 this.thirdcom = s.replace(/\D/g, '')
             }
         },
