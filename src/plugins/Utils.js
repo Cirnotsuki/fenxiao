@@ -1,4 +1,6 @@
-import crypto from 'crypto'
+// import md5 from 'js-md5';
+const md5 = require('js-md5')
+const sha512 = require("js-sha512").sha512
 export default {
   setCookie (cname, cvalue, exminutes) {
     let d = new Date();
@@ -31,16 +33,10 @@ export default {
     }
   },
   md5:function (code) {
-    let content = code.toString();//加密的明文；
-    let md5 = crypto.createHash('md5');//定义加密方式:md5不可逆,此处的md5可以换成任意hash加密的方法名称；
-    md5.update(content);
-    return md5.digest('hex');  //加密后的值
+    return md5(code.toString())
   },
   sha512:function (code) {
-    let content = code.toString();//加密的明文；
-    let sha512 = crypto.createHash('sha512');//定义加密方式:md5不可逆,此处的md5可以换成任意hash加密的方法名称；
-    sha512.update(content);
-    return sha512.digest('hex');  //加密后的值
+    return sha512(code.toString())
   },
   // 加密字符
   shamdive:function(s) {
@@ -66,6 +62,6 @@ export default {
     str = this.sha512(str);
     str = this.md5(str);
 
-    return str;
+        return str;
   }
 }

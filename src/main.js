@@ -1,17 +1,21 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
+// import Vue from 'vue'
+const Vue = require('vue')
 // @ts-ignore
 import App from './App'
 import router from './router'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+// import ElementUI from 'element-ui'
+const Element = require('element-ui')
+// import 'element-ui/lib/theme-chalk/index.css'
 import Utils from './plugins/utils.js';
+
+
 Vue.prototype.Utils=Utils;
 
 Vue.config.productionTip = false
 // @ts-ignore
-Vue.use(ElementUI)
+// Vue.use(Element)
 
 // 根据路由设置标题
 router.beforeEach( (to, from, next)=>{

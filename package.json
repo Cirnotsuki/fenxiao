@@ -13,8 +13,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "crypto": "^1.0.1",
     "element-ui": "^2.13.0",
+    "js-md5": "^0.7.3",
+    "js-sha512": "^0.8.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
