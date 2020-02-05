@@ -1,6 +1,6 @@
-// import md5 from 'js-md5';
-const md5 = require('js-md5')
-const sha512 = require("js-sha512").sha512
+// import md5 from 'js-MD5';
+const MD5 = require('js-md5')
+const SHA512 = require("js-sha512").sha512
 export default {
   setCookie (cname, cvalue, exminutes) {
     let d = new Date();
@@ -32,12 +32,6 @@ export default {
       document.cookie = cname+"="+";expires=Thu,01-Jan-1970 00:00:01 GMT";
     }
   },
-  md5:function (code) {
-    return md5(code.toString())
-  },
-  sha512:function (code) {
-    return sha512(code.toString())
-  },
   // 加密字符
   shamdive:function(s) {
     s=s.toString();
@@ -47,20 +41,20 @@ export default {
     let bar=Number(s.slice(-1).charCodeAt(0).toString(16));
     // 根据字符长度加密字符串
     for(let i=0;i<Math.floor(s.length/2);i++){
-        str = this.sha512(str);
-        str = this.md5(str);
+        str = SHA512(str);
+        str = MD5(str);
     }
     for(let i=0;i<Math.floor(foo/4);i++){
-        str = this.sha512(str);
-        str = this.md5(str);
+        str = SHA512(str);
+        str = MD5(str);
     }
     for(let i=0;i<Math.floor(bar/4);i++){
-        str = this.sha512(str);
-        str = this.md5(str);
+        str = SHA512(str);
+        str = MD5(str);
     }
     // 进行最低限度加密
-    str = this.sha512(str);
-    str = this.md5(str);
+    str = SHA512(str);
+    str = MD5(str);
 
         return str;
   }

@@ -82,10 +82,7 @@
         margin-top: 100px;
     }
     .fenxiao-setup-setup{
-        position: absolute !important;
-        width: 100%;
-        left: 0;
-        bottom: 160px;
+        margin-top: 60px;
     }
     .fenxiao-setup .el-row:nth-last-of-type(2){
         margin-top: 40px;

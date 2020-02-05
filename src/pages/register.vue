@@ -101,10 +101,7 @@
         margin-top: 100px;
     }
     .fenxiao-register-option{
-        position: absolute !important;
-        width: 100%;
-        left: 0;
-        bottom: 160px;
+        margin-top: 100px;
     }
     .fenxiao-register .el-row:first-of-type{
         margin-bottom: 40px;

@@ -102,10 +102,7 @@
         margin-top: 100px;
     }
     .fenxiao-login-option{
-        position: absolute !important;
-        width: 100%;
-        left: 0;
-        bottom: 160px;
+        margin-top: 135px;
     }
     .fenxiao-login .el-row{
         margin-bottom: 20px;

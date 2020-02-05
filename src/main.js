@@ -6,10 +6,9 @@ const Vue = require('vue')
 import App from './App'
 import router from './router'
 // import ElementUI from 'element-ui'
-const Element = require('element-ui')
+// const Element = require('element-ui')
 // import 'element-ui/lib/theme-chalk/index.css'
 import Utils from './plugins/utils.js';
-
 
 Vue.prototype.Utils=Utils;
 
